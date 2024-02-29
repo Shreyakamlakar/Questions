@@ -1,0 +1,51 @@
+<div class="mainBox" >
+    <div class="row">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div>
+                <label for="email">Email
+                    <input type="email"
+                           name="email" 
+                           value="email"
+                           ngModel
+                           required
+                           email>
+                </label>
+            </div>
+            <div>
+                <label for="">Subscription type: </label>
+                    <select id="subs" name="subModes" [ngModel]="defaultSubs">
+                        <option value="Basic">Basic</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Pro">Pro</option>
+                    </select>
+            </div>
+            <div>
+                <label for="password">Password
+                    <input type="password" 
+                           name="password"
+                           ngModel
+                           required>
+                </label>
+            </div>
+            <div>
+                <button type="submit" id="submit" [disabled]="!f.valid">Submit</button>
+            </div>
+            
+        </form>
+
+        <hr>
+        <div *ngIf="showData">
+            <h2>You Data is as follows:</h2>
+            <br>
+            <hr>
+            <p>Email: {{userInfo.email}}</p>
+            <p>Subscription: {{userInfo.subscriptionType}}</p>
+            <p>Password: {{userInfo.Password}}</p>
+        </div>
+        
+        
+        
+
+    </div>
+</div>
+

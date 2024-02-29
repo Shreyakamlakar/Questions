@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="userName"><br><br>
+<p *ngIf="serverCreated; else noServer">The name of the user is :{{userName}}<p>
+    <ng-template #noServer>
+        <p>
+            No Server was created!
+        </p>
+    </ng-template>
+
+
+<button [disabled]="!Result()" (click)="onButtonClick()">Reset Username</button>

@@ -1,0 +1,29 @@
+.mainBox{
+    height: 300px;
+    width: 300px;
+    border-width: 5px;
+    border-color: black;
+    background-color: rgb(100, 118, 28);
+    padding: 20px;
+    
+}
+input{
+    background-color: rgb(173, 191, 103);
+    border-radius: 10px;
+    border: 0px;
+}
+
+input.ng-invalid.ng-touched{
+    border-color: brown;
+}
+
+#submit{
+    height: 30px;
+    width: 50px;
+    border-radius: 10px;
+    border: 0cap;
+}
+
+body{
+    padding: 20px;
+}
